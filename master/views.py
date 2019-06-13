@@ -15,6 +15,8 @@ def index(request):
     list_of_dics = my_requests.homepage_movies_request()
 
     context = {'movies_dic': list_of_dics}
+    for dic in list_of_dics:
+        dic['producers'] = ', '.join(dic['producers'])
 
     return HttpResponse(template.render(context, request))
 

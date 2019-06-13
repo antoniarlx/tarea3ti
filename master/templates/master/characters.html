@@ -1,0 +1,110 @@
+<br/>
+<h1> Characters - {{character_dic.name}} </h1>
+<br/>
+
+<br/>
+<table width="200px">
+
+  <tr>
+
+    <th align="left"> Height </th>
+    <td>{{character_dic.height}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Mass </th>
+    <td>{{character_dic.Mass}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Hair Color </th>
+    <td>{{character_dic.hairColor}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Skin Color </th>
+    <td>{{character_dic.skinColor}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Eye Color </th>
+    <td>{{character_dic.eyeColor}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Birth Year </th>
+    <td>{{character_dic.birthYear}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Gender </th>
+    <td>{{character_dic.gender}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Created </th>
+    <td>{{character_dic.created}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Edited </th>
+    <td>{{character_dic.edited}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Homeworld </th>
+    <td> <a href="/planets/{{homeworld.id}}">{{homeworld.name}}</a></td>
+
+  </tr>
+
+
+  </table>
+  <br/>
+
+  <table style="width:1200px">
+
+  <tr>
+
+    <th align="left"> Films </th>
+
+    {% for film in films %}
+      <td> <a href="/movie_info/{{film.id}}">{{film.title}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+
+  <br/>
+  <table style="width:1200px">
+
+  <tr>
+
+    <th align="left"> Starships </th>
+
+    {% for starship in starships %}
+      <td> <a href="/starships/{{starship.id}}">{{starship.name}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+<br/>

@@ -1,0 +1,31 @@
+<!-- {% python, codigo -->
+
+<br/>
+<h1>Star Wars Movies </h1>
+<br/>
+
+<table style="width:1200px">
+
+  <tr>
+    <th align="left">Title</th>
+    <th align="left">Episode ID</th>
+    <th align="left">Release Date</th>
+    <th align="left">Director</th>
+    <th align="left">Producers</th>
+  </tr>
+
+  {% for movie in movies_dic %}
+
+    <tr>
+
+      <td><a href="movie_info/{{movie.id}}">{{movie.title}}</a></td>
+      <td>{{movie.episodeID}}</td>
+      <td>{{movie.releaseDate}}</td>
+      <td>{{movie.director}}</td>
+      <td>{{movie.producers}}</td>
+
+    </tr>
+
+  {% endfor %}
+
+</table>

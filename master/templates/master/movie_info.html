@@ -1,0 +1,125 @@
+
+<!-- {% python, codigo -->
+
+<br/>
+<h1> Star Wars - {{movie_dic.title}} </h1>
+<br/>
+
+<br/>
+<table>
+
+  <tr>
+
+    <th align="left"> Title </th>
+    <td>{{movie_dic.title}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Episode ID </th>
+    <td>{{movie_dic.episodeID}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Release Date </th>
+    <td>{{movie_dic.releaseDate}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Director </th>
+    <td>{{movie_dic.director}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Producers </th>
+    <td>{{movie_dic.producers}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Created </th>
+    <td>{{movie_dic.created}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Edited </th>
+    <td>{{movie_dic.edited}}</td>
+
+  </tr>
+
+
+  </table>
+  <br/>
+
+  <br/>
+  <table width="1200px">
+
+  <tr>
+
+    <th align="left"> Characters </th>
+
+    {% for character in characters %}
+      <td> <a href="/characters/{{character.id}}">{{character.name}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+  </table>
+  <br/>
+
+  <br/>
+  <table style="width:1200px">
+
+  <tr>
+
+    <th align="left"> Starships </th>
+
+    {% for starship in starships %}
+      <td> <a href="/starships/{{starship.id}}">{{starship.name}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+<br/>
+
+
+<br/>
+<table style="width:400px">
+
+  <tr>
+
+    <th align="left"> Planets </th>
+
+    {% for planet in planets %}
+      <td> <a href="/planets/{{planet.id}}">{{planet.name}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+<br/>
+
+
+<br/>
+<table style="width:1000px">
+
+  <tr>
+
+    <th align="left"> Opening Crawl </th>
+    <td>{{movie_dic.openingCrawl}}</td>
+
+  </tr>
+
+</table>
+<br/>

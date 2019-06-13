@@ -1,0 +1,113 @@
+<br/>
+<h1> Planets - {{planet_dic.name}} </h1>
+<br/>
+
+
+<br/>
+<table width="300px">
+
+  <tr>
+
+    <th align="left"> Rotation Period </th>
+    <td>{{planet_dic.rotationPeriod}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Orbital Period </th>
+    <td>{{planet_dic.orbitalPeriod}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Diameter </th>
+    <td>{{planet_dic.diameter}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Climates </th>
+    <td>{{planet_dic.climates}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Gravity </th>
+    <td>{{planet_dic.gravity}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Terrains </th>
+    <td>{{planet_dic.terrains}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Surface Water </th>
+    <td>{{planet_dic.surfaceWater}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Population </th>
+    <td>{{planet_dic.population}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Created </th>
+    <td>{{planet_dic.created}}</td>
+
+  </tr>
+
+  <tr>
+
+    <th align="left"> Edited </th>
+    <td>{{planet_dic.edited}}</td>
+
+  </tr>
+
+
+  </table>
+  <br/>
+
+  <table style="width:1200px">
+
+  <tr>
+
+    <th align="left"> Residents </th>
+
+    {% for resident in residents %}
+      <td> <a href="/characters/{{resident.id}}">{{resident.name}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+
+  <br/>
+
+  <table style="width:1200px">
+
+  <tr>
+
+    <th align="left"> Films </th>
+
+    {% for film in films %}
+      <td> <a href="/movie_info/{{film.id}}">{{film.title}}</a></td>
+    {% endfor %}
+
+  </tr>
+
+</table>
+
+<br/>
